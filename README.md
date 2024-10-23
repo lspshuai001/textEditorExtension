@@ -13,6 +13,8 @@ Editable Sidebar Extension 是一个贼JB简单的Edge浏览器扩展，点击�
 ## 下载CRX文件
 
     访问GitHub仓库：前往 GitHub仓库 并下载最新的CRX文件。
+    https://github.com/lspshuai001/textEditorExtension
+    
    ### 安装CRX文件：
         打开Edge浏览器，进入扩展管理页面 (edge://extensions/)。
         启用开发者模式：开启右上角的“开发者模式”开关。
