@@ -1,5 +1,8 @@
 # textEditorExtension
 A simple extension to open an editable page.
+---
+上个版本删了，把边栏去了
+---
 
 ## 概述
 
