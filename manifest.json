@@ -4,7 +4,7 @@
   "manifest_version": 3,
   "author": "Q",
   "description": "A simple extension to open an editable sidebar.",
-  "permissions": ["sidePanel", "tabs", "activeTab"],
+  "permissions": ["tabs", "activeTab"],
   "side_panel": {
     "default_path": "editable_page.html",
     "matches": ["<all_urls>"]
