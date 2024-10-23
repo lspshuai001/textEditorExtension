@@ -1,36 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
   <meta charset="UTF-8">
-  <title>Editable Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>editable_Page</title>
   <style>
     body {
       margin: 0;
-      padding: 20px;
-      box-sizing: border-box;
-      height: 100%;
-      width: 100%;
+      font-family: Arial, sans-serif;
       background-color: #f0f0f0;
-      /* 确保没有顶部和底部的边框 */
-      border: none;
     }
 
-    [contenteditable] {
-      outline: none;
-      padding: 10px;
+    #editor {
+      padding: 20px;
       border: 1px solid #ccc;
-      min-height: 300px;
-      line-height: 1.5;
-      font-size: 20px;
+      min-height: 90vh;
+      background-color: #fff;
+      margin: 10px;
+      overflow-y: auto;
+      font-size: 18px;
+      color: inherit;
     }
 
-    /* 防止默认样式影响 */
-    p {
-      margin: 0;
-      padding: 0;
+    #placeholder {
+      color: #888;
+      display: block;
     }
   </style>
 </head>
-<body contenteditable="true">
+<body>
+
+<div id="editor" contenteditable="true" onclick="hidePlaceholder()" onblur="setPlaceholder()">
+  <p id="placeholder"></p>
+</div>
+
+<script>
+  function hidePlaceholder() {
+    const placeholder = document.getElementById('placeholder');
+    placeholder.style.display = 'none';
+  }
+
+  function setPlaceholder() {
+    const editor = document.getElementById('editor');
+    const placeholder = document.getElementById('placeholder');
+    if (editor.innerHTML.trim() === '') {
+      placeholder.style.display = 'block';
+    }
+  }
+  document.addEventListener('DOMContentLoaded', setPlaceholder);
+</script>
+
 </body>
 </html>
